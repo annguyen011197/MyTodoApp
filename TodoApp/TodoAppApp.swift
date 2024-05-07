@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import FirebaseCore
 
 @main
 struct TodoAppApp: App {
@@ -23,10 +24,24 @@ struct TodoAppApp: App {
         }
     }()
 
+    @StateObject private var authen = Authen()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
+        .environmentObject(authen)
         .modelContainer(sharedModelContainer)
+    }
+    
+    init() {
+        setupFirebase()
+    }
+}
+
+fileprivate extension TodoAppApp {
+    func setupFirebase() {
+        FirebaseConfiguration.shared.setLoggerLevel(.min)
+        FirebaseApp.configure()
     }
 }
