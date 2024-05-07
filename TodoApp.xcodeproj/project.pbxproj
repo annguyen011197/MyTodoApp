@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8E2D767D2BE939BE00D40A5D /* TodoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2D767C2BE939BE00D40A5D /* TodoAppApp.swift */; };
-		8E2D767F2BE939BE00D40A5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2D767E2BE939BE00D40A5D /* ContentView.swift */; };
 		8E2D76812BE939BE00D40A5D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2D76802BE939BE00D40A5D /* Item.swift */; };
 		8E2D76832BE939BF00D40A5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E2D76822BE939BF00D40A5D /* Assets.xcassets */; };
 		8E2D76862BE939BF00D40A5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E2D76852BE939BF00D40A5D /* Preview Assets.xcassets */; };
@@ -34,8 +33,9 @@
 		8E2D76D62BEA512600D40A5D /* AddNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2D76D52BEA512600D40A5D /* AddNote.swift */; };
 		8E2D76DA2BEA552800D40A5D /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2D76D92BEA552800D40A5D /* Note.swift */; };
 		8E2D76DC2BEA654F00D40A5D /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2D76DB2BEA654F00D40A5D /* Button.swift */; };
-		8E2D76DE2BEA68D500D40A5D /* FriendScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2D76DD2BEA68D500D40A5D /* FriendScreen.swift */; };
-		8E2D76E02BEA6A2A00D40A5D /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2D76DF2BEA6A2A00D40A5D /* Friends.swift */; };
+		8E5A409E2BEA7BA80029913B /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A409D2BEA7BA80029913B /* NoteView.swift */; };
+		8E5A40A02BEA7BD60029913B /* DeleteNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A409F2BEA7BD60029913B /* DeleteNote.swift */; };
+		8E5A40A22BEA7C110029913B /* AddNoteBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5A40A12BEA7C110029913B /* AddNoteBottomSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +58,6 @@
 /* Begin PBXFileReference section */
 		8E2D76792BE939BE00D40A5D /* TodoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E2D767C2BE939BE00D40A5D /* TodoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAppApp.swift; sourceTree = "<group>"; };
-		8E2D767E2BE939BE00D40A5D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8E2D76802BE939BE00D40A5D /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		8E2D76822BE939BF00D40A5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E2D76852BE939BF00D40A5D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -82,8 +81,9 @@
 		8E2D76D52BEA512600D40A5D /* AddNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNote.swift; sourceTree = "<group>"; };
 		8E2D76D92BEA552800D40A5D /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		8E2D76DB2BEA654F00D40A5D /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
-		8E2D76DD2BEA68D500D40A5D /* FriendScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendScreen.swift; sourceTree = "<group>"; };
-		8E2D76DF2BEA6A2A00D40A5D /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
+		8E5A409D2BEA7BA80029913B /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
+		8E5A409F2BEA7BD60029913B /* DeleteNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteNote.swift; sourceTree = "<group>"; };
+		8E5A40A12BEA7C110029913B /* AddNoteBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteBottomSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +146,6 @@
 				8E2D76AE2BE9F6F600D40A5D /* screens */,
 				8E2D76A82BE9F11400D40A5D /* GoogleService-Info.plist */,
 				8E2D767C2BE939BE00D40A5D /* TodoAppApp.swift */,
-				8E2D767E2BE939BE00D40A5D /* ContentView.swift */,
 				8E2D76802BE939BE00D40A5D /* Item.swift */,
 				8E2D76822BE939BF00D40A5D /* Assets.xcassets */,
 				8E2D76842BE939BF00D40A5D /* Preview Content */,
@@ -190,9 +189,8 @@
 		8E2D76AE2BE9F6F600D40A5D /* screens */ = {
 			isa = PBXGroup;
 			children = (
+				8E5A409C2BEA7B8B0029913B /* homeScreen */,
 				8E2D76B12BE9F78400D40A5D /* AuthenScreen.swift */,
-				8E2D76BF2BEA0B3700D40A5D /* HomeScreen.swift */,
-				8E2D76DD2BEA68D500D40A5D /* FriendScreen.swift */,
 			);
 			path = screens;
 			sourceTree = "<group>";
@@ -212,7 +210,7 @@
 				8E2D76BA2BEA072C00D40A5D /* Authen.swift */,
 				8E2D76CF2BEA358B00D40A5D /* Notes.swift */,
 				8E2D76D52BEA512600D40A5D /* AddNote.swift */,
-				8E2D76DF2BEA6A2A00D40A5D /* Friends.swift */,
+				8E5A409F2BEA7BD60029913B /* DeleteNote.swift */,
 			);
 			path = logics;
 			sourceTree = "<group>";
@@ -235,6 +233,16 @@
 				8E2D76D92BEA552800D40A5D /* Note.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		8E5A409C2BEA7B8B0029913B /* homeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8E2D76BF2BEA0B3700D40A5D /* HomeScreen.swift */,
+				8E5A409D2BEA7BA80029913B /* NoteView.swift */,
+				8E5A40A12BEA7C110029913B /* AddNoteBottomSheet.swift */,
+			);
+			path = homeScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,21 +385,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E2D76E02BEA6A2A00D40A5D /* Friends.swift in Sources */,
 				8E2D76C22BEA0CCC00D40A5D /* AuthenState.swift in Sources */,
-				8E2D767F2BE939BE00D40A5D /* ContentView.swift in Sources */,
 				8E2D76B02BE9F72000D40A5D /* MainView.swift in Sources */,
 				8E2D76B22BE9F78400D40A5D /* AuthenScreen.swift in Sources */,
 				8E2D76812BE939BE00D40A5D /* Item.swift in Sources */,
+				8E5A40A02BEA7BD60029913B /* DeleteNote.swift in Sources */,
 				8E2D76BE2BEA086B00D40A5D /* InternalUser.swift in Sources */,
 				8E2D76C02BEA0B3700D40A5D /* HomeScreen.swift in Sources */,
-				8E2D76DE2BEA68D500D40A5D /* FriendScreen.swift in Sources */,
 				8E2D76C42BEA0D3B00D40A5D /* InternalError.swift in Sources */,
 				8E2D76D22BEA4F3F00D40A5D /* Text.swift in Sources */,
 				8E2D76D42BEA510B00D40A5D /* DataState.swift in Sources */,
 				8E2D76D62BEA512600D40A5D /* AddNote.swift in Sources */,
 				8E2D76DA2BEA552800D40A5D /* Note.swift in Sources */,
 				8E2D76BB2BEA072C00D40A5D /* Authen.swift in Sources */,
+				8E5A40A22BEA7C110029913B /* AddNoteBottomSheet.swift in Sources */,
+				8E5A409E2BEA7BA80029913B /* NoteView.swift in Sources */,
 				8E2D76B82BEA06E900D40A5D /* FirebaseService.swift in Sources */,
 				8E2D767D2BE939BE00D40A5D /* TodoAppApp.swift in Sources */,
 				8E2D76D02BEA358B00D40A5D /* Notes.swift in Sources */,

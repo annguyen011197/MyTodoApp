@@ -98,13 +98,25 @@ class FirebaseService {
         try await dbRef.child("users/\(uid)/notes/\(value.id)").removeValue()
     }
     
-    func findFriend(value: String) async throws {
-        let result = try await dbRef.child("users").queryOrdered(byChild: "username")
+    func findFriend(value: String) async throws -> String? {
+        let result = dbRef.child("users").queryOrdered(byChild: "username")
             .queryEqual(toValue: value)
-            .observeSingleEventAndPreviousSiblingKey(of: DataEventType.value)
+        let value: DataSnapshot? = try await withUnsafeThrowingContinuation({ cont in
+            result.observeSingleEvent(of: .value) { snapShot in
+                cont.resume(returning: snapShot)
+            }
+        })
+        return value?.key
+    }
     
-        
-//        print(result)
+    func addToFriend(value: String) async throws {
+        guard let uid = self.current?.uid else {
+            throw UnAuthenError()
+        }
+        let newRef = dbRef.child("users/\(value)/friends").childByAutoId()
+        try await newRef.setValue([
+            "id": uid
+        ])
     }
 }
 

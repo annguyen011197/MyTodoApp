@@ -38,8 +38,7 @@ struct AuthenScreen: View {
         .frame(width: 200)
         
         if let error = self.error as? FirebaseAuthenError {
-            Text("Username must not empty!")
-                .foregroundStyle(Color.red)
+            ErrorText(text: "Username must not empty!")
         }
     }
     
@@ -54,8 +53,7 @@ struct AuthenScreen: View {
                 .progressViewStyle(.circular)
         } else {
             if let error = self.error as? FirebaseAuthenError {
-                Text("Error happen, Please try again")
-                    .foregroundStyle(Color.red)
+                ErrorText(text: "Error happen, Please try again")
             }
             basicLoginButton
         }

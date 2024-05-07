@@ -10,7 +10,6 @@ import Foundation
 @MainActor
 class Notes: ObservableObject {
     @Published var currentNotes: [Note] = []
-
     
     func fetchData() {
         try? FirebaseService.shared.loadNotes(onNewData: { [weak self] notes in
