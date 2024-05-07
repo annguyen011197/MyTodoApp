@@ -62,6 +62,4 @@ struct AddNoteBottomSheet: View {
         }
     }
 }
-#Preview {
-    AddNoteBottomSheet()
-}
+
